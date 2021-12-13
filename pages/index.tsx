@@ -1,6 +1,7 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Grid from '../components/grid/grid'
+import Header from '../components/header'
 import PreviewModeToggle from '../components/preview-mode-toggle'
 import Selectors from '../components/selectors'
 import UseGameProvider from '../hooks/use-game'
@@ -11,8 +12,8 @@ const Home: NextPage = () => {
       <Head>
         <title>Sudoku</title>
       </Head>
-      <h1 className="p-2 text-4xl text-center">Sudoku</h1>
       <UseGameProvider>
+        <Header />
         <Grid />
         <PreviewModeToggle />
         <Selectors />

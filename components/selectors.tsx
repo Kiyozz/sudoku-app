@@ -1,6 +1,7 @@
 import { ReactNode } from 'react'
 import { CgClose } from 'react-icons/cg'
 import cx from 'classnames'
+import { DEFAULT_VALUE } from '../constants/default-value.constant'
 import { useGame } from '../hooks/use-game'
 
 type SelectorProps = {
@@ -53,7 +54,7 @@ const Selectors = () => {
       <Selector isDisabled={isDisabled} onClick={onClick('8')} value="8" />
       <Selector isDisabled={isDisabled} onClick={onClick('9')} value="9" />
       <div />
-      <Selector isDisabled={isDisabled} onClick={onClick('')} value={<CgClose />} />
+      <Selector isDisabled={isDisabled} onClick={onClick(DEFAULT_VALUE)} value={<CgClose />} />
     </div>
   )
 }
