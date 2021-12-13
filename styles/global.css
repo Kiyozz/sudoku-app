@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply h-screen w-screen select-none overflow-hidden bg-gray-200;
+}
+
+#__next {
+  @apply h-full w-full flex flex-col;
+}
+
+.game-grid {
+  width: 23.625rem;
+  height: 23.625rem;
+}
+
+.selectors {
+  width: 23.625rem;
+}
+
+.square {
+  @apply grid grid-cols-3 grid-rows-3 w-1/3 h-1/3;
+}
+
+.grid-item {
+  @apply w-full h-full;
+}
+
+@media screen(sm) {
+  .game-grid {
+    width: 30.75rem;
+    height: 30.75rem;
+  }
+
+  .selectors {
+    width: 30.75rem;
+  }
+}
+
+@media screen(lg) {
+  .game-grid {
+    width: 32.75rem;
+    height: 32.75rem;
+  }
+
+  .selectors {
+    width: 32.75rem;
+  }
+}
+
